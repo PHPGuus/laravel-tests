@@ -23,6 +23,6 @@ class HorizonJob implements ShouldQueue
     {
         Log::info(__METHOD__);
 
-        Log::info('This is the first kind of message from the running job.');
+        Log::info('This is the second kind of message from the running job.');
     }
 }
