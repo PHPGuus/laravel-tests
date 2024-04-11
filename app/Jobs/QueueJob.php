@@ -16,16 +16,13 @@ class QueueJob implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct()
-    {
-        //
-    }
+    public function __construct(public string $arg) {}
 
     /**
      * Execute the job.
      */
-    public function handle(string $arg): void
+    public function handle(): void
     {
-        Log::info('QueuedJob "'.$arg.'" starting and stopping!');
+        Log::info('QueuedJob "'.$this->arg.'" starting and stopping!');
     }
 }
